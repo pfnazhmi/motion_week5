@@ -36,6 +36,25 @@ class HomeView extends GetView<HomeController> {
               ),
             ],
           ),
+          bottomNavigationBar: NavigationBar(
+            destinations: const [
+              NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+              NavigationDestination(
+                icon: Icon(Icons.search),
+                label: 'Search',
+              ),
+              NavigationDestination(
+                  icon: Icon(Icons.movie_outlined), label: 'Reels'),
+              NavigationDestination(icon: Icon(Icons.home), label: 'Shop'),
+              NavigationDestination(
+                  icon: CircleAvatar(
+                    backgroundImage: AssetImage(
+                      "assets/images/foto_profile.png",
+                    ),
+                  ),
+                  label: 'Profile'),
+            ],
+          ),
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
